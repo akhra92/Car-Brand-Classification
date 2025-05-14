@@ -5,14 +5,16 @@ from torch.optim import Adam
 import config as cfg
 import numpy as np
 from dataset import get_loaders
+from transforms import get_transforms
 
 
 def train():
     model = CustomModel(3, 16).to(cfg.device)
+    transforms = get_transforms(train=True)
     optimizer = Adam(model.parameters(), lr=cfg.lr)
     criterion = nn.CrossEntropyLoss()    
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=3, verbose=True)
-    train_loader, test_loader = get_loaders()
+    train_loader, test_loader = get_loaders(root=cfg.root, transforms=transforms, batch_size=cfg.batch_size)
 
     trn_losses, val_losses = [], []
     trn_acc, val_acc = [], []

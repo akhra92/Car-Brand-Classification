@@ -3,7 +3,8 @@ import random
 from PIL import Image
 import torch
 from torch.utils.data import Dataset, DataLoader, random_split
-
+random.seed(2025)
+torch.manual_seed(2025)
 
 class CarDataset(Dataset):
     def __init__(self, root, transforms=None, shuffle=False):

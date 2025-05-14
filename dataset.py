@@ -3,8 +3,7 @@ import random
 from PIL import Image
 import torch
 from torch.utils.data import Dataset, DataLoader, random_split
-from torchvision import transforms as T
-import config as cfg
+
 
 class CarDataset(Dataset):
     def __init__(self, root, transforms=None, shuffle=False):
@@ -48,22 +47,17 @@ class CarDataset(Dataset):
             image = self.transforms(image)
         
         return image, torch.tensor(label).float().long()
+    
 
-transforms = T.Compose([T.Resize((224,224)),                        
-                        T.ToTensor(),
-                        T.Normalize(mean=[0.485, 0.456, 0.406],
-                                    std=[0.229, 0.224, 0.225])])
-
-
-def get_loaders():
-    dataset = CarDataset(root=cfg.root, transforms=transforms, shuffle=True)
+def get_loaders(root, batch_size, transforms):
+    dataset = CarDataset(root=root, transforms=transforms, shuffle=True)
 
     train_size = int(0.8*len(dataset))
     test_size = len(dataset) - train_size
 
     train_dataset, test_dataset = random_split(dataset, [train_size, test_size])
 
-    train_loader = DataLoader(train_dataset, batch_size=cfg.batch_size, shuffle=True)
-    test_loader = DataLoader(test_dataset, batch_size=cfg.batch_size, shuffle=False)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
     return train_loader, test_loader

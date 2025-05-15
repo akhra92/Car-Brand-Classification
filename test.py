@@ -22,7 +22,7 @@ class Denormalize:
         return tensor
     
 class ModelInferenceVisualizer:
-    def __init__(self, model, device, class_names=None, im_size=224, mean=mean, std=std):
+    def __init__(self, model, device, class_names=None, im_size=224, mean=cfg.mean, std=cfg.std):
         self.denormalize = Denormalize(mean, std)
         self.model = model
         self.device = device
@@ -38,7 +38,7 @@ class ModelInferenceVisualizer:
         return (tensor * 255).astype(np.uint8)
     
     def generate_cam_visualization(self, image_tensor):
-        cam = GradCAMPlusPlus(model=self.model, target_layers=[self.model.conv4], use_cuda=self.device=='cuda')
+        cam = GradCAMPlusPlus(model=self.model, target_layers=[self.model.conv4[0]], use_cuda=self.device=='cuda')
         grayscale_cam = cam(input_tensor=image_tensor.unsqueeze(0))[0, :]
         return grayscale_cam
     

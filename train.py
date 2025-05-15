@@ -75,4 +75,4 @@ def train():
             torch.save(model.state_dict(), best_model_path)
             print(f'Best model saved at epoch {epoch+1} with Val Acc: {best_val_acc:.4f}')
 
-        return trn_losses, val_losses, trn_acc, val_acc
+    return trn_losses, val_losses, trn_acc, val_acc

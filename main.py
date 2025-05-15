@@ -29,7 +29,7 @@ def main():
     plot(trn_losses, val_losses, trn_acc, val_acc)
     classes = ['BMW', 'Byd', 'Chevrolet', 'Ford', 'Honda', 'Hundai', 'Mercedes-Benz', 'Mitsubishi', 'Renault', 'Skoda', 'Suzuki', 'Toyota', 'kia', 'lada', 'nissan', 'volkswagen']
     model = CustomModel(3, 16).to(cfg.device)
-    model.load_state_dict(torch.load('best_model.pth'))
+    model.load_state_dict(torch.load('./saved_models/best_model.pth'))
     inference_visualizer = ModelInferenceVisualizer(model=model,
                                                     device=cfg.device,
                                                     class_names=classes,

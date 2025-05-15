@@ -14,7 +14,7 @@ def run(args):
     
     tfs = get_transforms(train = False)    
     
-    default_path = "./sample_images/chevrolet.jpg"    
+    default_path = "./sample_images/image25.jpg"    
 
     m = load_model(num_classes, args.checkpoint_path)
     st.title("Car Brand Classification")
@@ -35,8 +35,7 @@ def load_model(num_classes, checkpoint_path):
 
 def predict(m, path, tfs, cls_names):
     
-    fontpath = "SpoqaHanSansNeo-Light.ttf"
-    font = ImageFont.truetype(fontpath, 200)
+    font = ImageFont.load_default()
     im = Image.open(path)
     im.save(path)
     
@@ -47,7 +46,7 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(description = 'Car Brands Classification Demo')
     
-    parser.add_argument("-cp", "--checkpoint_path", type = str, default = 'saved_models/best_model.pth', help = "Path to the checkpoint")
+    parser.add_argument("-cp", "--checkpoint_path", type = str, default = './saved_models/best_model.pth', help = "Path to the checkpoint")
     
     args = parser.parse_args()     
     

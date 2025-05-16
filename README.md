@@ -58,7 +58,7 @@ The confusion matrix below illustrates the model's performance across different 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/car-brand-classification.git
+   git clone https://github.com/akhra92/car-brand-classification.git
    cd car-brand-classification
    ```
 

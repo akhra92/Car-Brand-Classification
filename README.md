@@ -1,6 +1,3 @@
-Gotcha! Here’s the **raw `README.md` content** you can copy-paste directly:
-
-````markdown
 # 🚗 Car Brands Classification using Custom CNN
 
 This project focuses on classifying car images into different brands using a custom Convolutional Neural Network (CNN) model built from scratch. The goal is to achieve high accuracy in identifying car brands based on visual features.

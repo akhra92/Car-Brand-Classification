@@ -9,7 +9,7 @@ This project focuses on classifying car images into different brands using a cus
 - **Task**: Multi-class image classification
 - **Dataset**: Images of cars belonging to various brands (e.g., BMW, Audi, Mercedes, Toyota, etc.)
 - **Model**: Custom CNN architecture (without using pre-trained models)
-- **Framework**: PyTorch (or TensorFlow/Keras if that's your choice)
+- **Framework**: PyTorch
 - **Evaluation Metrics**: Accuracy, Loss, Confusion Matrix, Grad-CAM Visualizations
 
 ---
@@ -25,8 +25,6 @@ Below are some random samples from the dataset with corresponding labels:
 ## 🏗️ CNN Model Architecture
 
 The custom CNN model consists of several convolutional and pooling layers, followed by fully connected layers for classification. ReLU activations and batch normalization are used to improve performance.
-
-> (Optional) You can include a simple model diagram here.
 
 ---
 
@@ -71,45 +69,21 @@ The confusion matrix below illustrates the model's performance across different 
 ## 🚀 How to Run
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/yourusername/car-brand-classification.git
    cd car-brand-classification
 ````
 
 2. Install dependencies:
 
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
-3. Train the model:
+3. Train and test the model:
 
-   ```bash
-   python train.py
    ```
-4. Evaluate the model:
-
-   ```bash
-   python evaluate.py
+   python main.py
    ```
 
----
 
-## 📌 Conclusion
 
-* Built a custom CNN model for car brand classification.
-* Achieved promising results on the dataset.
-* Visualized model performance using Grad-CAM and confusion matrix.
-
----
-
-## 📧 Contact
-
-For any questions or collaboration, feel free to reach out:
-
-* **Name**: Bekhzod
-* **Email**: \[[your-email@example.com](mailto:your-email@example.com)]
-* **LinkedIn**: \[Your LinkedIn Profile]
-
----
-
-### ⭐ Don't forget to give a star if you found this useful!

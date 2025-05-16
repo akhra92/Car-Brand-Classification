@@ -113,23 +113,3 @@ For any questions or collaboration, feel free to reach out:
 ---
 
 ### ⭐ Don't forget to give a star if you found this useful!
-
----
-
-### 📝 Note:
-
-> Make sure to replace the image paths (`path/to/xxx.png`) with the actual paths to your generated visualizations.
-
-```
-
----
-
-Would you also like me to give you **ready-to-use Python code snippets** for generating:
-1. Dataset samples visualization
-2. Accuracy/Loss plots
-3. Grad-CAM visualizations
-4. Confusion matrix plot
-
-All in one go?  
-Reply with **"Yes, give me the code too!"** if you want it. 🔥
-```

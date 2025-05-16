@@ -18,7 +18,7 @@ This project focuses on classifying car images into different brands using a cus
 
 Below are some random samples from the dataset with corresponding labels:
 
-![Dataset Samples](path/to/dataset_samples.png)
+![Dataset Samples](assets/samples1.png)
 
 ---
 
@@ -30,13 +30,10 @@ The custom CNN model consists of several convolutional and pooling layers, follo
 
 ## 📈 Training & Validation Curves
 
-Here are the learning curves showing **Accuracy** and **Loss** over training epochs:
+Here are the learning curves showing **Accuracy** and **Loss** over epochs:
 
-### Accuracy Curve
-![Accuracy Curve](path/to/accuracy_curve.png)
-
-### Loss Curve
-![Loss Curve](path/to/loss_curve.png)
+### Train and Validation Curves
+![Curves](assets/plots1.png)
 
 ---
 
@@ -44,7 +41,7 @@ Here are the learning curves showing **Accuracy** and **Loss** over training epo
 
 Grad-CAM is used to highlight the important regions in the image that contributed to the classification decision.
 
-![Grad-CAM Visualization](path/to/gradcam_visualization.png)
+![Grad-CAM Visualization](assets/gradcam1.png)
 
 ---
 
@@ -52,19 +49,10 @@ Grad-CAM is used to highlight the important regions in the image that contribute
 
 The confusion matrix below illustrates the model's performance across different car brand classes.
 
-![Confusion Matrix](path/to/confusion_matrix.png)
+![Confusion Matrix](assets/confusion1.png)
 
 ---
 
-## ✅ Results Summary
-
-| Metric        | Value |
-|---------------|--------|
-| Train Accuracy| XX %   |
-| Val Accuracy  | XX %   |
-| Test Accuracy | XX %   |
-
----
 
 ## 🚀 How to Run
 

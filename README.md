@@ -61,8 +61,8 @@ The confusion matrix below illustrates the model's performance across different 
 1. Clone the repository:
    
    ```
-   git clone https://github.com/akhra92/car-brand-classification.git
-   cd car-brand-classification
+   git clone https://github.com/akhra92/Car-Brand-Classification.git
+   cd Car-Brand-Classification
    ```
 
 3. Install dependencies:
